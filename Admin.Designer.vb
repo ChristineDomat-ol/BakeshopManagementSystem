@@ -167,7 +167,7 @@ Partial Class Admin
         Me.Label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label4.Font = New System.Drawing.Font("Cooper Black", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(84, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(72, 114)
+        Me.Label4.Location = New System.Drawing.Point(72, 112)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(176, 24)
         Me.Label4.TabIndex = 7
