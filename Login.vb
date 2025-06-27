@@ -1,7 +1,7 @@
 ﻿Public Class Login
 
     'Login source frame natin since to unang nagrurun
-    Public ProductList As New List(Of Product)() 'Product list
+    Public ProductList As New List(Of Product)() 'Product/Menu list
 
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
