@@ -1,6 +1,45 @@
 ﻿Public Class Login
+
+    'Login source frame natin since to unang nagrurun
+    Public ProductList As New List(Of Product)() 'Product list
+
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+        'adding of initial products in the list
+        Dim sampleProduct1 As New Product With {
+            .Name = "Strawberry Cake",
+            .Category = "🍰 Cake",
+            .Price = 345
+        }
+        ProductList.Add(sampleProduct1)
+
+        Dim sampleProduct2 As New Product With {
+            .Name = "Garlic Bread",
+            .Category = "🍞 Bread",
+            .Price = 100
+        }
+        ProductList.Add(sampleProduct2)
+
+        Dim sampleProduct3 As New Product With {
+            .Name = "Macaron",
+            .Category = "🥧 Pastry",
+            .Price = 30
+        }
+        ProductList.Add(sampleProduct3)
+
+        Dim sampleProduct4 As New Product With {
+            .Name = "Chocolate Chips Cookie",
+            .Category = "🍪 Cookie",
+            .Price = 30
+        }
+        ProductList.Add(sampleProduct4)
+
+        Dim sampleProduct5 As New Product With {
+            .Name = "Iced Caramel Machiato",
+            .Category = "🥤 Coffee",
+            .Price = 30
+        }
+        ProductList.Add(sampleProduct5)
     End Sub
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
@@ -28,5 +67,9 @@
         Else
             MessageBox.Show("Invalid username or password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
+    End Sub
+
+    Private Sub Login_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
+        Application.Exit()
     End Sub
 End Class
