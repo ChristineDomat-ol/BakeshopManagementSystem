@@ -38,10 +38,9 @@ Partial Class Login
         Me.Label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label1.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(153, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(36, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(701, 188)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(526, 153)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(90, 18)
+        Me.Label1.Size = New System.Drawing.Size(72, 16)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Username: "
         '
@@ -51,11 +50,10 @@ Partial Class Login
         Me.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtUsername.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtUsername.ForeColor = System.Drawing.Color.Gray
-        Me.txtUsername.Location = New System.Drawing.Point(707, 214)
-        Me.txtUsername.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtUsername.Location = New System.Drawing.Point(530, 174)
         Me.txtUsername.Multiline = True
         Me.txtUsername.Name = "txtUsername"
-        Me.txtUsername.Size = New System.Drawing.Size(311, 28)
+        Me.txtUsername.Size = New System.Drawing.Size(233, 23)
         Me.txtUsername.TabIndex = 1
         '
         'txtPassword
@@ -64,11 +62,10 @@ Partial Class Login
         Me.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtPassword.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPassword.ForeColor = System.Drawing.Color.Gray
-        Me.txtPassword.Location = New System.Drawing.Point(707, 302)
-        Me.txtPassword.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtPassword.Location = New System.Drawing.Point(530, 245)
         Me.txtPassword.Multiline = True
         Me.txtPassword.Name = "txtPassword"
-        Me.txtPassword.Size = New System.Drawing.Size(311, 28)
+        Me.txtPassword.Size = New System.Drawing.Size(233, 23)
         Me.txtPassword.TabIndex = 3
         Me.txtPassword.UseSystemPasswordChar = True
         '
@@ -79,10 +76,9 @@ Partial Class Login
         Me.Label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label2.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(153, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(36, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(701, 276)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(526, 224)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(75, 18)
+        Me.Label2.Size = New System.Drawing.Size(62, 16)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Password"
         '
@@ -93,10 +89,9 @@ Partial Class Login
         Me.btnSee.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnSee.FlatAppearance.BorderSize = 0
         Me.btnSee.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSee.Location = New System.Drawing.Point(967, 302)
-        Me.btnSee.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnSee.Location = New System.Drawing.Point(725, 245)
         Me.btnSee.Name = "btnSee"
-        Me.btnSee.Size = New System.Drawing.Size(51, 28)
+        Me.btnSee.Size = New System.Drawing.Size(38, 23)
         Me.btnSee.TabIndex = 4
         Me.btnSee.TabStop = False
         Me.btnSee.UseVisualStyleBackColor = False
@@ -109,21 +104,20 @@ Partial Class Login
         Me.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnLogin.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLogin.ForeColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(219, Byte), Integer))
-        Me.btnLogin.Location = New System.Drawing.Point(803, 367)
-        Me.btnLogin.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnLogin.Location = New System.Drawing.Point(602, 298)
         Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.Size = New System.Drawing.Size(105, 38)
+        Me.btnLogin.Size = New System.Drawing.Size(79, 31)
         Me.btnLogin.TabIndex = 5
         Me.btnLogin.Text = "LOGIN"
         Me.btnLogin.UseVisualStyleBackColor = False
         '
         'Login
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.BakeshopManagementSystem.My.Resources.Resources.Login
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1067, 554)
+        Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.btnLogin)
         Me.Controls.Add(Me.btnSee)
         Me.Controls.Add(Me.txtPassword)
@@ -132,7 +126,6 @@ Partial Class Login
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.Name = "Login"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

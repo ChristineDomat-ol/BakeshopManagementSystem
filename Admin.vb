@@ -187,4 +187,8 @@
         ClearFields()
 
     End Sub
+
+    Private Sub tblMenu_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles tblMenu.CellContentClick
+
+    End Sub
 End Class

@@ -1,7 +1,14 @@
-﻿Public Class Login
+﻿Imports BakeshopManagementSystem.Product
+
+Public Class Login
 
     'Login source frame natin since to unang nagrurun
-    Public ProductList As New List(Of Product)() 'Product list
+    Public ProductList As New List(Of Product)() 'Product/Menu list
+
+    'list for checkout
+    Public Shared CartList As New List(Of ProductOrder)()
+    'to display username
+    Public Shared CurrentUsername As String
 
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -60,6 +67,8 @@
                (username = "HindiNaPeoplePleaser" And password = "marielle") Then
 
             MessageBox.Show("Welcome " & username & "!")
+            CurrentUsername = username
+
             Dim userForm As New User()
             userForm.Show()
             Me.Hide()
