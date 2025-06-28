@@ -13,4 +13,11 @@
         nextId += 1
     End Sub
 
+    Public Class ProductOrder
+        Public Property Name As String
+        Public Property Price As Decimal
+        Public Property Quantity As Integer
+        Public Property Subtotal As Decimal
+    End Class
+
 End Class
