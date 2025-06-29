@@ -57,7 +57,7 @@ Public Class User
 
         MessageBox.Show("Checkout complete! Thank you for your order.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-        Login.CartList.Clear()
+        'Login.CartList.Clear()  'clinear ko 'to kase hindi maread sa order.vb yung inorder kase nacclear everytime pag nagccheckout  - megs
     End Sub
 
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
@@ -137,10 +137,12 @@ Public Class User
                 Dim subtotal As Decimal = qty * price
 
                 Login.CartList.Add(New ProductOrder With {
-                    .Name = name,
-                    .Price = price,
-                    .Quantity = qty,
-                    .Subtotal = subtotal
+                .Id = Convert.ToInt32(row.Cells("ID").Value), 'para mag match yung ID sa orders   - megs
+                .Name = name,
+                .Price = price,
+                .Quantity = qty,
+                .Subtotal = subtotal,
+                .Status = "Pending"     'i added this for status ng order    - megs
                 })
 
                 Dim sb As New Text.StringBuilder()
@@ -160,4 +162,6 @@ Public Class User
             End If
         End If
     End Sub
+
+
 End Class

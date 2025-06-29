@@ -10,9 +10,12 @@ Public Class Login
     'to display username
     Public Shared CurrentUsername As String
 
+    Private passwordVisible As Boolean = False
+
+
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        'adding of initial products in the list
+
         Dim sampleProduct1 As New Product With {
             .Name = "Strawberry Cake",
             .Category = "🍰 Cake",
@@ -47,6 +50,10 @@ Public Class Login
             .Price = 30
         }
         ProductList.Add(sampleProduct5)
+
+        txtPassword.UseSystemPasswordChar = True
+        passwordVisible = False
+        btnEyeOpened.BackgroundImage = My.Resources._20
     End Sub
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
@@ -75,10 +82,26 @@ Public Class Login
 
         Else
             MessageBox.Show("Invalid username or password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            txtUsername.Clear()
+            txtPassword.Clear()
         End If
     End Sub
 
     Private Sub Login_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
         Application.Exit()
     End Sub
+
+    Private Sub btnEyeOpened_Click(sender As Object, e As EventArgs) Handles btnEyeOpened.Click
+        passwordVisible = Not passwordVisible
+
+        If passwordVisible Then
+            txtPassword.UseSystemPasswordChar = False
+            btnEyeOpened.BackgroundImage = My.Resources._191
+        Else
+            txtPassword.UseSystemPasswordChar = True
+            btnEyeOpened.BackgroundImage = My.Resources._20
+        End If
+    End Sub
+
+
 End Class

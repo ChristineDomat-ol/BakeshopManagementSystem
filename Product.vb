@@ -14,10 +14,13 @@
     End Sub
 
     Public Class ProductOrder
+        Public Property Id As Integer    'for ID matchy matchy sa orders  - megs
         Public Property Name As String
         Public Property Price As Decimal
         Public Property Quantity As Integer
         Public Property Subtotal As Decimal
+        Public Property Status As String = "Pending"   ' for status ng order   -megs
+
     End Class
 
 End Class
