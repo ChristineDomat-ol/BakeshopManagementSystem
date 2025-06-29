@@ -14,7 +14,7 @@
     End Sub
 
     Public Class ProductOrder
-        Public Property Id As Integer    'for ID matchy matchy sa orders  - megs    'name nalang ng user girl~  -tin 
+        Public Property Username As String    'for ID matchy matchy sa orders  - megs    'name nalang ng user girl~  -tin    'oksi po madam -megs
         Public Property Name As String
         Public Property Price As Decimal
         Public Property Quantity As Integer

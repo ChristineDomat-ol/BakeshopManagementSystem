@@ -54,7 +54,7 @@ Public Class User
 
         For Each order As ProductOrder In PresentCartList
             Login.CartList.Add(New ProductOrder With {
-            .Id = order.Id,
+            .Username = order.Username,
             .Name = order.Name,
             .Price = order.Price,
             .Quantity = order.Quantity,
@@ -160,12 +160,12 @@ Public Class User
                 Dim subtotal As Decimal = qty * price
 
                 PresentCartList.Add(New ProductOrder With {
-                .Id = Convert.ToInt32(row.Cells("ID").Value), 'para mag match yung ID sa orders   - megs
+                .Username = Login.CurrentUsername,
                 .Name = name,
                 .Price = price,
                 .Quantity = qty,
                 .Subtotal = subtotal,
-                .Status = "Pending"     'i added this for status ng order    - megs
+                .Status = "Pending"
                 })
 
                 Dim sb As New Text.StringBuilder()
