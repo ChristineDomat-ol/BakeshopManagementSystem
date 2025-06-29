@@ -3,7 +3,7 @@
 Public Class Orders
 
     Private Sub Orders_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        lblUserName.Text = Login.CurrentUsername
+        'rekta "Admin" na po to - tin lblUserName.Text = Login.CurrentUsername
         InitializeTable()
         LoadCartData()
     End Sub
