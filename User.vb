@@ -1,6 +1,9 @@
 ﻿Imports BakeshopManagementSystem.Product
 
 Public Class User
+
+    Public Shared PresentCartList As New List(Of ProductOrder)()
+
     Private Sub User_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ShowDataInGrid()
         lblUserName.Text = Login.CurrentUsername
@@ -40,7 +43,8 @@ Public Class User
 
     End Sub
     Private Sub btnCheckout_Click(sender As Object, e As EventArgs) Handles btnCheckout.Click
-        If Login.CartList.Count = 0 Then
+
+        If PresentCartList.Count = 0 Then
             MessageBox.Show("Your cart is empty. Please add items to cart before checkout.", "Cart Empty", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Return
         End If
@@ -48,9 +52,20 @@ Public Class User
         Dim receiptText As New Text.StringBuilder()
         Dim totalPrice As Decimal = 0
 
+        For Each order As ProductOrder In PresentCartList
+            Login.CartList.Add(New ProductOrder With {
+            .Id = order.Id,
+            .Name = order.Name,
+            .Price = order.Price,
+            .Quantity = order.Quantity,
+            .Subtotal = order.Subtotal,
+            .Status = "Pending"
+        })
+        Next
+
         receiptText.AppendLine("----- Receipt -----")
 
-        For Each item In Login.CartList
+        For Each item In PresentCartList
             receiptText.AppendLine($"{item.Quantity} x {item.Name,-25} {item.Subtotal,10:0.00}")
             totalPrice += item.Subtotal
         Next
@@ -59,6 +74,10 @@ Public Class User
         lblTotal.Text = totalPrice.ToString("0.00")
 
         MessageBox.Show("Checkout complete! Thank you for your order.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+        PresentCartList.Clear()
+        lblOrders.Text = ""
+        lblTotal.Text = "0.00"
 
         'Login.CartList.Clear()  'clinear ko 'to kase hindi maread sa order.vb yung inorder kase nacclear everytime pag nagccheckout  - megs
     End Sub
@@ -116,6 +135,7 @@ Public Class User
                 End If
             Next
 
+            PresentCartList.Clear()
             lblOrders.Text = ""
             lblTotal.Text = "0.00"
 
@@ -139,7 +159,7 @@ Public Class User
             If Integer.TryParse(qtyCell.ToString(), qty) AndAlso qty > 0 Then
                 Dim subtotal As Decimal = qty * price
 
-                Login.CartList.Add(New ProductOrder With {
+                PresentCartList.Add(New ProductOrder With {
                 .Id = Convert.ToInt32(row.Cells("ID").Value), 'para mag match yung ID sa orders   - megs
                 .Name = name,
                 .Price = price,
@@ -151,7 +171,7 @@ Public Class User
                 Dim sb As New Text.StringBuilder()
                 Dim total As Decimal = 0
 
-                For Each item In Login.CartList
+                For Each item In PresentCartList
                     sb.AppendLine($"{item.Quantity,4}  {item.Name.PadRight(20)} {item.Subtotal,10:0.00}")
                     total += item.Subtotal
                 Next

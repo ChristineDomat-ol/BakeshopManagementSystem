@@ -131,7 +131,6 @@ Partial Class User
         Me.tblMenu.Location = New System.Drawing.Point(0, 0)
         Me.tblMenu.Margin = New System.Windows.Forms.Padding(4)
         Me.tblMenu.Name = "tblMenu"
-        Me.tblMenu.ReadOnly = True
         Me.tblMenu.RowHeadersVisible = False
         Me.tblMenu.RowHeadersWidth = 51
         Me.tblMenu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
@@ -146,7 +145,6 @@ Partial Class User
         Me.ProductName.HeaderText = "NAME"
         Me.ProductName.MinimumWidth = 6
         Me.ProductName.Name = "ProductName"
-        Me.ProductName.ReadOnly = True
         Me.ProductName.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.ProductName.Width = 110
         '
@@ -156,7 +154,6 @@ Partial Class User
         Me.ProductCategory.HeaderText = "CATEGORY"
         Me.ProductCategory.MinimumWidth = 6
         Me.ProductCategory.Name = "ProductCategory"
-        Me.ProductCategory.ReadOnly = True
         Me.ProductCategory.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.ProductCategory.Width = 109
         '
@@ -166,7 +163,6 @@ Partial Class User
         Me.ProductPrice.HeaderText = "PRICE"
         Me.ProductPrice.MinimumWidth = 6
         Me.ProductPrice.Name = "ProductPrice"
-        Me.ProductPrice.ReadOnly = True
         Me.ProductPrice.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.ProductPrice.Width = 109
         '
@@ -175,7 +171,6 @@ Partial Class User
         Me.txtQty.HeaderText = "QUANTITY"
         Me.txtQty.MinimumWidth = 6
         Me.txtQty.Name = "txtQty"
-        Me.txtQty.ReadOnly = True
         Me.txtQty.Width = 110
         '
         'btnAddtoCart
@@ -188,7 +183,6 @@ Partial Class User
         Me.btnAddtoCart.HeaderText = ""
         Me.btnAddtoCart.MinimumWidth = 6
         Me.btnAddtoCart.Name = "btnAddtoCart"
-        Me.btnAddtoCart.ReadOnly = True
         Me.btnAddtoCart.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         Me.btnAddtoCart.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
         Me.btnAddtoCart.Text = "Add to Cart"

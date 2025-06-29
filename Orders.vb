@@ -51,16 +51,13 @@ Public Class Orders
         End If
 
         For Each row As DataGridViewRow In tblMenu.SelectedRows
-            Dim id = Convert.ToInt32(row.Cells("ID").Value)
+            Dim index As Integer = row.Index
 
             row.Cells("STATUS").Value = "Completed"
 
-            For Each order As ProductOrder In Login.CartList
-                If order.Id = id Then
-                    order.Status = "Completed"
-                    Exit For
-                End If
-            Next
+            If index >= 0 AndAlso index < Login.CartList.Count Then
+                Login.CartList(index).Status = "Completed"
+            End If
         Next
 
         tblMenu.ClearSelection()
