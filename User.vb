@@ -28,13 +28,16 @@ Public Class User
             tblMenu.Rows.Add(product.Id, product.Name, product.Category, product.Price.ToString(), "")
         Next
 
+        tblMenu.Columns("ID").Visible = False
+
         tblMenu.Columns("ID").AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
         tblMenu.Columns("CATEGORY").AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
         tblMenu.Columns("PRICE").AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
-        tblMenu.Columns("NAME").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
         tblMenu.Columns("QUANTITY").AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
         tblMenu.Columns("btnAddToCart").AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
-        tblMenu.Columns("ID").Visible = False
+        tblMenu.Columns("NAME").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+
+
     End Sub
     Private Sub btnCheckout_Click(sender As Object, e As EventArgs) Handles btnCheckout.Click
         If Login.CartList.Count = 0 Then

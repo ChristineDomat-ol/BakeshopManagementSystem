@@ -59,9 +59,10 @@ Partial Class User
         Me.lblUserName.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.lblUserName.Font = New System.Drawing.Font("Cooper Black", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblUserName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(254, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.lblUserName.Location = New System.Drawing.Point(478, 9)
+        Me.lblUserName.Location = New System.Drawing.Point(637, 11)
+        Me.lblUserName.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblUserName.Name = "lblUserName"
-        Me.lblUserName.Size = New System.Drawing.Size(220, 31)
+        Me.lblUserName.Size = New System.Drawing.Size(279, 39)
         Me.lblUserName.TabIndex = 2
         Me.lblUserName.Text = "👤 USER NAME"
         '
@@ -72,9 +73,10 @@ Partial Class User
         Me.btnReload.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnReload.FlatAppearance.BorderSize = 0
         Me.btnReload.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnReload.Location = New System.Drawing.Point(266, 89)
+        Me.btnReload.Location = New System.Drawing.Point(355, 110)
+        Me.btnReload.Margin = New System.Windows.Forms.Padding(4)
         Me.btnReload.Name = "btnReload"
-        Me.btnReload.Size = New System.Drawing.Size(31, 23)
+        Me.btnReload.Size = New System.Drawing.Size(41, 28)
         Me.btnReload.TabIndex = 19
         Me.btnReload.UseVisualStyleBackColor = False
         '
@@ -85,9 +87,10 @@ Partial Class User
         Me.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnSearch.FlatAppearance.BorderSize = 0
         Me.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSearch.Location = New System.Drawing.Point(230, 89)
+        Me.btnSearch.Location = New System.Drawing.Point(307, 110)
+        Me.btnSearch.Margin = New System.Windows.Forms.Padding(4)
         Me.btnSearch.Name = "btnSearch"
-        Me.btnSearch.Size = New System.Drawing.Size(31, 23)
+        Me.btnSearch.Size = New System.Drawing.Size(41, 28)
         Me.btnSearch.TabIndex = 18
         Me.btnSearch.UseVisualStyleBackColor = False
         '
@@ -97,33 +100,42 @@ Partial Class User
         Me.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtSearch.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtSearch.ForeColor = System.Drawing.Color.Gray
-        Me.txtSearch.Location = New System.Drawing.Point(28, 89)
+        Me.txtSearch.Location = New System.Drawing.Point(37, 110)
+        Me.txtSearch.Margin = New System.Windows.Forms.Padding(4)
         Me.txtSearch.Multiline = True
         Me.txtSearch.Name = "txtSearch"
-        Me.txtSearch.Size = New System.Drawing.Size(233, 23)
+        Me.txtSearch.Size = New System.Drawing.Size(311, 28)
         Me.txtSearch.TabIndex = 17
         '
         'Panel1
         '
         Me.Panel1.Controls.Add(Me.tblMenu)
-        Me.Panel1.Location = New System.Drawing.Point(27, 130)
+        Me.Panel1.Location = New System.Drawing.Point(36, 160)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(414, 271)
+        Me.Panel1.Size = New System.Drawing.Size(585, 334)
         Me.Panel1.TabIndex = 16
         '
         'tblMenu
         '
-        Me.tblMenu.AllowUserToOrderColumns = True
-        Me.tblMenu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.tblMenu.AllowUserToAddRows = False
+        Me.tblMenu.AllowUserToDeleteRows = False
+        Me.tblMenu.AllowUserToResizeColumns = False
+        Me.tblMenu.AllowUserToResizeRows = False
+        Me.tblMenu.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.tblMenu.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(246, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(196, Byte), Integer))
         Me.tblMenu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.tblMenu.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ProductName, Me.ProductCategory, Me.ProductPrice, Me.txtQty, Me.btnAddtoCart})
         Me.tblMenu.Location = New System.Drawing.Point(0, 0)
+        Me.tblMenu.Margin = New System.Windows.Forms.Padding(4)
         Me.tblMenu.Name = "tblMenu"
+        Me.tblMenu.ReadOnly = True
         Me.tblMenu.RowHeadersVisible = False
         Me.tblMenu.RowHeadersWidth = 51
         Me.tblMenu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
-        Me.tblMenu.Size = New System.Drawing.Size(414, 271)
+        Me.tblMenu.Size = New System.Drawing.Size(585, 334)
         Me.tblMenu.TabIndex = 0
         '
         'ProductName
@@ -134,7 +146,9 @@ Partial Class User
         Me.ProductName.HeaderText = "NAME"
         Me.ProductName.MinimumWidth = 6
         Me.ProductName.Name = "ProductName"
+        Me.ProductName.ReadOnly = True
         Me.ProductName.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.ProductName.Width = 110
         '
         'ProductCategory
         '
@@ -142,7 +156,9 @@ Partial Class User
         Me.ProductCategory.HeaderText = "CATEGORY"
         Me.ProductCategory.MinimumWidth = 6
         Me.ProductCategory.Name = "ProductCategory"
+        Me.ProductCategory.ReadOnly = True
         Me.ProductCategory.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.ProductCategory.Width = 109
         '
         'ProductPrice
         '
@@ -150,13 +166,17 @@ Partial Class User
         Me.ProductPrice.HeaderText = "PRICE"
         Me.ProductPrice.MinimumWidth = 6
         Me.ProductPrice.Name = "ProductPrice"
+        Me.ProductPrice.ReadOnly = True
         Me.ProductPrice.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.ProductPrice.Width = 109
         '
         'txtQty
         '
         Me.txtQty.HeaderText = "QUANTITY"
         Me.txtQty.MinimumWidth = 6
         Me.txtQty.Name = "txtQty"
+        Me.txtQty.ReadOnly = True
+        Me.txtQty.Width = 110
         '
         'btnAddtoCart
         '
@@ -168,10 +188,12 @@ Partial Class User
         Me.btnAddtoCart.HeaderText = ""
         Me.btnAddtoCart.MinimumWidth = 6
         Me.btnAddtoCart.Name = "btnAddtoCart"
+        Me.btnAddtoCart.ReadOnly = True
         Me.btnAddtoCart.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         Me.btnAddtoCart.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
         Me.btnAddtoCart.Text = "Add to Cart"
         Me.btnAddtoCart.UseColumnTextForButtonValue = True
+        Me.btnAddtoCart.Width = 111
         '
         'Panel2
         '
@@ -183,9 +205,10 @@ Partial Class User
         Me.Panel2.Controls.Add(Me.Panel3)
         Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Controls.Add(Me.Label2)
-        Me.Panel2.Location = New System.Drawing.Point(483, 90)
+        Me.Panel2.Location = New System.Drawing.Point(644, 111)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(291, 312)
+        Me.Panel2.Size = New System.Drawing.Size(388, 384)
         Me.Panel2.TabIndex = 20
         '
         'btnDeleteCart
@@ -195,9 +218,10 @@ Partial Class User
         Me.btnDeleteCart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnDeleteCart.FlatAppearance.BorderSize = 0
         Me.btnDeleteCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnDeleteCart.Location = New System.Drawing.Point(253, 21)
+        Me.btnDeleteCart.Location = New System.Drawing.Point(337, 26)
+        Me.btnDeleteCart.Margin = New System.Windows.Forms.Padding(4)
         Me.btnDeleteCart.Name = "btnDeleteCart"
-        Me.btnDeleteCart.Size = New System.Drawing.Size(23, 20)
+        Me.btnDeleteCart.Size = New System.Drawing.Size(31, 25)
         Me.btnDeleteCart.TabIndex = 21
         Me.btnDeleteCart.UseVisualStyleBackColor = False
         '
@@ -209,9 +233,10 @@ Partial Class User
         Me.btnCheckout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCheckout.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCheckout.ForeColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(219, Byte), Integer))
-        Me.btnCheckout.Location = New System.Drawing.Point(79, 270)
+        Me.btnCheckout.Location = New System.Drawing.Point(105, 332)
+        Me.btnCheckout.Margin = New System.Windows.Forms.Padding(4)
         Me.btnCheckout.Name = "btnCheckout"
-        Me.btnCheckout.Size = New System.Drawing.Size(144, 27)
+        Me.btnCheckout.Size = New System.Drawing.Size(192, 33)
         Me.btnCheckout.TabIndex = 26
         Me.btnCheckout.Text = "CHECKOUT"
         Me.btnCheckout.UseVisualStyleBackColor = False
@@ -223,9 +248,10 @@ Partial Class User
         Me.lblTotal.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.lblTotal.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTotal.ForeColor = System.Drawing.Color.FromArgb(CType(CType(153, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(36, Byte), Integer))
-        Me.lblTotal.Location = New System.Drawing.Point(227, 237)
+        Me.lblTotal.Location = New System.Drawing.Point(303, 292)
+        Me.lblTotal.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblTotal.Name = "lblTotal"
-        Me.lblTotal.Size = New System.Drawing.Size(36, 18)
+        Me.lblTotal.Size = New System.Drawing.Size(48, 23)
         Me.lblTotal.TabIndex = 25
         Me.lblTotal.Text = "0.00"
         '
@@ -236,9 +262,10 @@ Partial Class User
         Me.Label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label5.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(153, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(36, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(34, 237)
+        Me.Label5.Location = New System.Drawing.Point(45, 292)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(51, 18)
+        Me.Label5.Size = New System.Drawing.Size(64, 23)
         Me.Label5.TabIndex = 24
         Me.Label5.Text = "TOTAL"
         '
@@ -246,18 +273,20 @@ Partial Class User
         '
         Me.Panel3.Controls.Add(Me.lblOrders)
         Me.Panel3.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel3.Location = New System.Drawing.Point(16, 61)
+        Me.Panel3.Location = New System.Drawing.Point(21, 75)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(258, 160)
+        Me.Panel3.Size = New System.Drawing.Size(344, 197)
         Me.Panel3.TabIndex = 23
         '
         'lblOrders
         '
         Me.lblOrders.AutoSize = True
         Me.lblOrders.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblOrders.Location = New System.Drawing.Point(7, 9)
+        Me.lblOrders.Location = New System.Drawing.Point(9, 11)
+        Me.lblOrders.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblOrders.Name = "lblOrders"
-        Me.lblOrders.Size = New System.Drawing.Size(47, 17)
+        Me.lblOrders.Size = New System.Drawing.Size(61, 20)
         Me.lblOrders.TabIndex = 0
         Me.lblOrders.Text = "             "
         '
@@ -268,9 +297,10 @@ Partial Class User
         Me.Label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label3.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(153, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(36, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(14, 35)
+        Me.Label3.Location = New System.Drawing.Point(19, 43)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(266, 23)
+        Me.Label3.Size = New System.Drawing.Size(332, 28)
         Me.Label3.TabIndex = 22
         Me.Label3.Text = "--------------------------------"
         '
@@ -281,9 +311,10 @@ Partial Class User
         Me.Label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label2.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(153, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(36, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(14, 12)
+        Me.Label2.Location = New System.Drawing.Point(19, 15)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(58, 23)
+        Me.Label2.Size = New System.Drawing.Size(73, 28)
         Me.Label2.TabIndex = 21
         Me.Label2.Text = "CART"
         '
@@ -294,19 +325,20 @@ Partial Class User
         Me.btnLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnLogout.FlatAppearance.BorderSize = 0
         Me.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnLogout.Location = New System.Drawing.Point(12, 415)
+        Me.btnLogout.Location = New System.Drawing.Point(16, 511)
+        Me.btnLogout.Margin = New System.Windows.Forms.Padding(4)
         Me.btnLogout.Name = "btnLogout"
-        Me.btnLogout.Size = New System.Drawing.Size(44, 27)
+        Me.btnLogout.Size = New System.Drawing.Size(59, 33)
         Me.btnLogout.TabIndex = 17
         Me.btnLogout.UseVisualStyleBackColor = False
         '
         'User
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.BakeshopManagementSystem.My.Resources.Resources.bg
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(1067, 554)
         Me.Controls.Add(Me.btnLogout)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.btnReload)
@@ -317,6 +349,7 @@ Partial Class User
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "User"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "User"

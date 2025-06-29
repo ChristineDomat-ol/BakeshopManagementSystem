@@ -69,7 +69,7 @@ Public Class Login
 
             ' Customer credentials
         ElseIf (username = "Croxy" And password = "rox") OrElse
-               (username = "Tinepay" And password = "tin") OrElse
+               (username = "Tin" And password = "tin") OrElse
                (username = "Megatron" And password = "megs") OrElse
                (username = "HindiNaPeoplePleaser" And password = "marielle") Then
 
